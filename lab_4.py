@@ -16,9 +16,17 @@ jk.eat()
 jk.description()
 jk.sound()
 class person(object):
-	def __init__(self, name, age, gender, city, fav_color):
+	def __init__(self, name, age, gender, city, fav_color, fav_game):
 		self.name = name
 		self.age = age
 		self.gender = gender
-		self.city = cuty
-		self.fav_color = make_sound
+		self.city = city
+		self.fav_color = fav_color
+		self.fav_game = fav_game
+	def living(self):
+		print("my name is", self.name, "and i live at", self.city)
+	def gaming(self):
+		print("btw my favorite game is", self.fav_game, "let's go play", self.fav_game)
+ido = person("ido", 16, "male", "tzour hadassa", "blue", "fortnite")
+ido.living()
+ido.gaming()
