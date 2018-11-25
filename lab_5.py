@@ -75,12 +75,12 @@ exam_two = int(simpledialog.askstring("Input", "Input exam grade two: ", parent=
 
 exam_three = int(simpledialog.askstring("Input", "Input exam grade three: ", parent=tk.Tk().withdraw()))
 
-grade = ["exam_one, exam_two, exam_three"]
+grades = [exam_one, exam_two, exam_three]
 sum = 0
-for grade in grade:
+for grade in grades:
 	sum = sum + grade
 
-avg = sum / len(grdes)
+avg = sum / len(grades)
 
 if avg >= 90:
     letter_grade = "A"
@@ -100,7 +100,7 @@ for grade in grades:
 
     print("Grade: " + letter_grade)
 
-if letter-grade is "F":
+if letter_grade is "F":
 	print ("Student is failing.")
 else:
     print ("Student is passing.")
