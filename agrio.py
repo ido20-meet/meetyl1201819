@@ -65,7 +65,7 @@ def collide(ball_a, ball_b):
 
 	DISTANCE_BETWEEN_CENTERS = ((ball_a.xcor()-ball_b.xcor())**2 + (ball_a.ycor()-ball_b.ycor())**2)**0.5
 
-	if DISTANCE_BETWEEN_CENTERS+10 <= ball_a.radius + ball_b.radiusa:
+	if DISTANCE_BETWEEN_CENTERS+10 <= ball_a.r + ball_b.r:
 		return True
 	else:
 		return False
