@@ -25,8 +25,8 @@ score = 0
 turtle.tracer(0)
 turtle.hideturtle()
 running = True
-screen_width = turtle.getcanvas().winfo_width()/2
-screen_height  = turtle.getcanvas().winfo_height()/2
+screen_width = turtle.getcanvas().winfo_width()//2
+screen_height  = turtle.getcanvas().winfo_height()//2
 #Score is up here^^^
 def random_color():
     r = random.randint(0,255)
@@ -129,8 +129,8 @@ def movearound():
 turtle.listen()'''
 running = True
 while running is True:
-    screen_width = turtle.getcanvas().winfo_width()/2
-    screen_height = turtle.getcanvas().winfo_height()/2
+    screen_width = turtle.getcanvas().winfo_width()//2
+    screen_height = turtle.getcanvas().winfo_height()//2
 
     #turtle.clone = border
     #border.stamp(-screenwidth + 30,-screenheight + 20)
