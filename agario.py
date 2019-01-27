@@ -17,7 +17,7 @@ lines.write("Agar.io!", align='center', font = ("Impact",30,"normal"))
 lines.penup()
 lines.goto(0, 250)
 lines.pendown()
-
+#The title is up there^^^
 
 global score
 score = 0
@@ -26,11 +26,13 @@ turtle.hideturtle()
 running = True
 screen_width = turtle.getcanvas().winfo_width()/2
 screen_height  = turtle.getcanvas().winfo_height()/2
+#Score is up here^^^
 def random_color():
     r = random.randint(0,255)
     g = random.randint(0,255)
     b = random.randint(0,255)
     return(r,g,b)
+#Random color for the balls^^^
 my_ball = Ball(100,35,21,23,50,random_color())
 number_of_balls = 7
 minimum_ball_radius = 10
@@ -40,6 +42,7 @@ maximum_ball_dx = 2
 minimum_ball_dy = -2
 maximum_ball_dy = 2
 BALLS = []
+#Balls settig is up there^^^
 
 for i in range(number_of_balls):
     x = random.randint(-screen_width + maximum_ball_radius,screen_width - maximum_ball_radius)
@@ -53,7 +56,7 @@ for i in range(number_of_balls):
 def move_all_balls():
     for ball in BALLS:
         ball.move(screen_width,screen_height)
-
+#Balls creation is up here^^^
 def check_collision(ball_a,ball_b):
     if ball_a == ball_b:
         return False 
