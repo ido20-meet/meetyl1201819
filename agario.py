@@ -5,6 +5,7 @@ import math
 from ball import Ball
 turtle.colormode(255)
 
+turtle.bgpic("agariobg.gif")
 
 lines = turtle.clone()
 
@@ -53,13 +54,14 @@ for i in range(number_of_balls):
     color = random_color()
     Ball1 = Ball(x,y,dy,dx,radius,color)
     BALLS.append(Ball1)
+
 def move_all_balls():
     for ball in BALLS:
         ball.move(screen_width,screen_height)
 #Balls creation is up here^^^
 def check_collision(ball_a,ball_b):
     if ball_a == ball_b:
-        return False 
+        return False
     x1=ball_a.pos()[0]
     x2=ball_b.pos()[0]
     y1=ball_a.pos()[1]
@@ -98,7 +100,7 @@ def check_all_balls_collisions():
                         print("end")
                         t.goto(0,0)
                         t.write('GAME OVER',align="center",font =  ('fantasy', 70, 'normal'))
-                        time.sleep(7)
+                        
                         quit()
                     if my_ball == ball_a:
                         score += 1
@@ -111,12 +113,20 @@ def check_all_balls_collisions():
                         print("end")
                         t.goto(0,0)
                         t.write('GAME OVER',align="center",font =  ('fantasy', 70, 'normal'))
+                        time.sleep(2)
                         quit()
                     if my_ball == ball_a:
                         score += 1
 def movearound():
     my_ball.goto(turtle.getcanvas().winfo_pointerx() - screen_width*2 ,screen_height*2 - turtle.getcanvas().winfo_pointery()) 
+    turtle.ondrag(turtle.goto)
 
+
+
+
+
+'''turtle.getcanvas().bind ("<motion>", movearound)
+turtle.listen()'''
 running = True
 while running is True:
     screen_width = turtle.getcanvas().winfo_width()/2
